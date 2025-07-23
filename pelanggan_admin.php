@@ -35,7 +35,7 @@ $username = htmlspecialchars($_SESSION['username']);
   <!-- Sidebar -->
   <aside class="main-sidebar sidebar-dark-success elevation-4">
     <a href="#" class="brand-link">
-      <span class="brand-text font-weight-light">Bintang Furniture Admin</span>
+      <span class="brand-text font-weight-light">Bintang Furniture </span>
     </a>
     <div class="sidebar">
       <nav>

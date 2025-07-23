@@ -17,7 +17,7 @@ if ($id_product) {
     echo "<script>alert('Produk dihapus dari keranjang');</script>";
     echo "<script>location='cart.php';</script>";
 } else {
-    echo "<script>alert('ID produk tidak ditemukan');</script>";
+    echo "<script>alert('ID produk tidak');</script>";
     echo "<script>location='cart.php';</script>";
 }
 ?>
