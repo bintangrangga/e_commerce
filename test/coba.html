@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bintang Furniture - Cart</title>
+  <link rel="stylesheet" href="">
+</head>
+<style>
+   /* Full background section */
+.cart-section {
+  width: 100%;
+  background-color: #355d49;
+  color: #fff;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Container to limit content width */
+.cart-container {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #355d49;
+  padding: 20px;
+  border-radius: 20px;
+  /* box-shadow dihapus */
+}
+
+
+/* Header */
+.cart-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cart-title h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cart-title p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Cart item layout */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #d9dedc;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 500px;
+}
+
+/* Item details (image + text) */
+.item-details {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 250px;
+}
+
+.item-details img {
+  width: 90px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.item-text {
+  color: black;
+}
+
+.item-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.item-subtitle, .item-price {
+  margin: 4px 0;
+}
+
+/* Quantity buttons */
+.amount-control {
+  display: flex;
+  align-items: center;
+  border: 2px solid #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 18px;
+  gap: 10px;
+  background-color: transparent;
+}
+
+.amount-control button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Price display */
+.price {
+  font-weight: bold;
+  min-width: 120px;
+  text-align: right;
+}
+
+/* Checkout section */
+.checkout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.checkout-btn {
+  background-color: #f7c948;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .amount-control, .price {
+    margin-top: 10px;
+  }
+
+  .checkout {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+}
+
+
+</style>
+<body>
+  <section class="cart-section">
+  <div class="cart-container">
+    <h1 class="cart-heading">BINTANG FURNITURE</h1>
+    <div class="cart-title">
+      <h2>Your shopping cart</h2>
+      <p>click, collect, and own</p>
+    </div>
+
+    <!-- Cart Item -->
+    <div class="cart-item">
+      <div class="item-details">
+        <img src="file_foto/sofa_3.jpg" alt="Sofa">
+        <div class="item-text">
+          <p class="item-title">Sofa living room</p>
+          <p class="item-subtitle">Modern Klasik Cozesty</p>
+          <p class="item-price">Rp. 3.500.000</p>
+        </div>
+      </div>
+      <div class="amount-control">
+        <button class="minus">−</button>
+        <span class="qty">1</span>
+        <button class="plus">+</button>
+      </div>
+      <div class="price">Rp. 3.300.000</div>
+    </div>
+
+    <!-- Checkout Area -->
+    <div class="checkout">
+      <button class="delete-btn">🗑️</button>
+      <button class="checkout-btn">checkout</button>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
