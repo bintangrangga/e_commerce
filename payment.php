@@ -50,7 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_payment'])) {
   <link rel="icon" href="file_foto/my_logo_transparant.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-
 <style>
 .popup-overlay {
   position: fixed;
@@ -92,6 +91,80 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_payment'])) {
   border-radius: 8px;
   text-decoration: none;
 }
+ /* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 15px;
+  margin-left: -25px;
+  text-transform: capitalize;
+}
+
+.dropbtn i {
+  margin-left: 5px;
+}
+
+/* Dropdown box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1b1b1b;
+  min-width: 150px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 99;
+}
+
+/* Dropdown item */
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change text color of main dropdown when hovered */
+.dropdown:hover .dropbtn {
+  color: #000000; /* bebas kamu ganti */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+}
 </style>
 
 <body>
@@ -100,7 +173,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_payment'])) {
     <img src="file_foto/my_logo.png" alt="Bintang Furniture Logo" class="logo-img"/>
     <nav>
       <a href="dashboard.php">dashboard</a>
-      <a href="dashboard.php">category</a>
+      <div class="dropdown">
+            <button class="dropbtn">category <i class="fa-solid fa-caret-down"></i></button>
+            <div class="dropdown-content">
+              <a href="category_sofa.php">sofa</a>
+              <a href="category_table.php">table</a>
+              <a href="category_cupboard.php">cupboard</a>
+            </div>
+      </div>
       <a href="about_us.php">about us</a>
     </nav>
   </div>
