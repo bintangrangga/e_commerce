@@ -46,7 +46,7 @@ $username = htmlspecialchars($_SESSION['username']);
             </a>
           </li>
           <li class="nav-item">
-            <a href="tampilan_produk_admin.php" class="nav-link">
+            <a href="tampilan_product_admin.php" class="nav-link">
               <i class="nav-icon fas fa-box"></i><p>Product Data</p>
             </a>
           </li>
