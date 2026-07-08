@@ -66,6 +66,26 @@ if (isset($_POST["cari_kategori_table"])) {
   background-color: #333;
 }
 
+
+  .button-detail{
+    background:#EFB95F;
+    color:#000;
+    text-decoration:none;
+    padding:2px 8px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 15px;
+}
+
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
@@ -137,6 +157,10 @@ if (isset($_POST["cari_kategori_table"])) {
         <p><?php echo $row ["nama_product"]?></p>
         <p>Rp. <?php echo number_format($row ["harga_product"], 0, ',', '.');?></p>
         <div class="btn-group">
+           <a class="button-detail"
+              href="description.php?id_product=<?= $row['id_product']; ?>">
+              Detail Product
+            </a>
           <button class="button-cart">
            <a href="keranjang.php?id_product=<?= $row["id_product"]; ?>">add to cart</a>
           </button>
@@ -165,6 +189,10 @@ if (isset($_POST["cari_kategori_table"])) {
         <p><?php echo $row ["nama_product"]?></p>
         <p>Rp.<?php echo number_format($row ["harga_product"], 0, ',', '.');?></p>
         <div class="btn-group">
+           <a class="button-detail"
+              href="description.php?id_product=<?= $row['id_product']; ?>">
+              Detail Product
+            </a>
           <button class="button-cart"><a href="keranjang.php?id_product=<?= $row["id_product"]; ?>">add to cart</a></button>
         </div>
       </div>
